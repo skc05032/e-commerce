@@ -49,13 +49,11 @@ const Home = () => {
                 return (
                 <Link  
                 key={id}
-                to={`/products/${id}`}
+                to={`${import.meta.env.BASE_URL}products/${id}`}
                 className={styles.productListItem}>
                         <img 
-                            src= {image}
-                            onError={(e) => {
-                                console.log(e.target.src);
-                            }} />
+                            src= {`${import.meta.env.BASE_URL}${image.replace(/^\/+/, "")}`}
+                          />
                         <div className={styles.productInfo}>
                             <div className={styles.productCategory}>{category}</div>
                             <div className= {styles.productName}>{name}</div>
