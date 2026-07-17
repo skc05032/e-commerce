@@ -28,6 +28,8 @@
     border: 1px solid #bdc3c7;
     border-radius: 4px;
     overflow: hidden;
+    text-decoration: none;
+    color: black;
 }
 
 .productListItem img{
