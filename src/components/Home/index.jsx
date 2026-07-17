@@ -9,7 +9,7 @@ import useFetchProducts from "../../hooks/useFetchProducts";
 const Home = () => { 
     const {products, isProductsLoading, isProductsError} = useFetchProducts();
     const [selectedCategory,setSelectedCategory] = useState("전체");
-
+     console.log("products.length =", products.length);
     const fileredProducts = products.filter(({ category }) => {
         if(selectedCategory === "전체"){
             return true; 
@@ -51,7 +51,11 @@ const Home = () => {
                 key={id}
                 to={`/products/${id}`}
                 className={styles.productListItem}>
-                        <img src= {image} />
+                        <img 
+                            src= {image}
+                            onError={(e) => {
+                                console.log(e.target.src);
+                            }} />
                         <div className={styles.productInfo}>
                             <div className={styles.productCategory}>{category}</div>
                             <div className= {styles.productName}>{name}</div>

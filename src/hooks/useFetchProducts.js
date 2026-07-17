@@ -13,8 +13,10 @@ function useFetchProducts(){
              if(!response.ok){
                 throw new Error();
              }
-
+             
              const json = await response.json();
+
+             
 
             setProducts(json);
             setIsProductsLoading(false);
