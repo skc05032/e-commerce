@@ -12,7 +12,7 @@ function useFetchProduct(productId){
                 setIsProductLoading(true);
                 // http://localhost:3000/products/${productId}?_embed=reviews
                 const response =  await fetch(
-                    `http://localhost:3000/products/${productId}?`
+                    `https://e-commerce-rzh9.onrender.com/products?productId=${productId}`
                 );
                 if(!response.ok) {
                     throw new Error("");

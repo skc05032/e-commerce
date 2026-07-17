@@ -10,7 +10,7 @@ function useFetchReviews(productId){
             try{
                 setIsReviewsLoading(true);
                 const response = await fetch(
-                    `http://localhost:3000/reviews?productId=${productId}`
+                    `https://e-commerce-rzh9.onrender.com/reviews?productId=${productId}`
                 );
 
                 if(!response.ok){

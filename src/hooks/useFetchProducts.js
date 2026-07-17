@@ -8,7 +8,7 @@ function useFetchProducts(){
     useEffect(() => {
         async function fetchProducts(){
           try{
-             const response = await fetch("http://localhost:3000/products");
+             const response = await fetch("https://e-commerce-rzh9.onrender.com");
 
              if(!response.ok){
                 throw new Error();
